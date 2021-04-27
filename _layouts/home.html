@@ -9,7 +9,7 @@ layout: default
       {% assign image_files = site.static_files | where: "image", true %}
       {% for myimage in image_files %}
       <div class="col-6 col-md-6 col-lg-{% cycle '8', '4', '3', '6', '3', '6', '6', '4', '4', '4', '3', '6', '3', '8', '4' %} aos-init" data-aos="fade-up" data-aos-delay="{% cycle '100', '200', '300', '400' %}">
-        <a href="{{ myimage.path | absolute_url }}" class="d-block photo-item" data-fancybox="gallery">
+        <a href="https://res.cloudinary.com/moorehill-org/image/fetch/c_fill,f_auto,q_auto,w_800/{{ myimage.path | absolute_url }}" class="d-block photo-item" data-fancybox="gallery">
           {% cloudinary {{ myimage.path }} alt="Image" class="img-fluid" %}
           <div class="photo-text-more">
             <div class="photo-text-more">
@@ -20,6 +20,9 @@ layout: default
         </a>
       </div>
       {% endfor %}
+
+
+      
 
     </div>
     <div class="row justify-content-center">
