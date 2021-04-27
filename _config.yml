@@ -1,7 +1,7 @@
 title: Moore Hill
 tagline: 
 description: >- # this means to ignore newlines until "baseurl:"
-  The family history and lore of the North Louisiana Moores.
+  The Moore family history and lore
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.moorehill.org" # the base hostname & protocol for your site, e.g. http://example.com
 email: family@moorehill.org
