@@ -6,10 +6,11 @@ layout: compress
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
     <title>{{ site.title }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="{{ '/assets/css' | absolute_url }}" rel="stylesheet" />
+
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | absolute_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/magnific-popup.css' | absolute_url }}" />
@@ -22,6 +23,7 @@ layout: compress
     <link rel="stylesheet" href="{{ '/assets/css/fancybox.min.css' | absolute_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style(1).css' | absolute_url }}" />
   </head>
+
   <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
     <div class="site-wrap">
       <div class="site-mobile-menu">
@@ -83,6 +85,7 @@ layout: compress
       {{ content }}
 
     </div>
+
     <script src="{{ '/assets/js/jquery-3.3.1.min.js' | absolute_url }}"></script>
     <script src="{{ '/assets/js/jquery-migrate-3.0.1.min.js' | absolute_url }}"></script>
     <script src="{{ '/assets/js/jquery-ui.js' | absolute_url }}"></script>
@@ -97,32 +100,15 @@ layout: compress
     <script src="{{ '/assets/js/jquery.fancybox.min.js' | absolute_url }}"></script>
     <script src="{{ '/assets/js/main.js' | absolute_url }}"></script>
 
-    <script async="" src="{{ 'js' | absolute_url }}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCLBJ6Q9S6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      gtag("config", "UA-xxxxxxxxxx-xx");
+      gtag('config', 'G-PCLBJ6Q9S6');
     </script>
 
-    <span
-      id="buffer-extension-hover-button"
-      style="
-        display: none;
-        position: absolute;
-        z-index: 8675309;
-        width: 100px;
-        height: 25px;
-        background-image: url('chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@2x.png');
-        background-size: 100px 25px;
-        opacity: 0.9;
-        cursor: pointer;
-        top: 340px;
-        left: 305px;
-      "
-    ></span>
   </body>
 </html>
