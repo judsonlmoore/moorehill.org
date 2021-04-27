@@ -14,8 +14,7 @@ facebook:
 #  app_id: 990949061035215
 #  publisher: 'https://www.facebook.com/JudsonLMooreBlog/'
   admins: judsonlmoore
-# favicon: /assets/images/favicon.png
-og_image: /assets/images/2-17.jpg
+  og_image: /assets/images/2-17.jpg
 # webmaster_verifications:
 #   google: 3MN-XApFrgWYSpGop2aNPX3eHkQtKupxl-OltwME23o
 #   bing: 1571295b1311496094a646cca481014e
