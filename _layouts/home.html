@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<main class="main-content">
+  <div class="container-fluid photos">
+    <div class="row align-items-stretch">
+
+      {% assign image_files = site.static_files | where: "image", true %}
+      {% for myimage in image_files %}
+      <div class="col-6 col-md-6 col-lg-{% cycle '8', '4', '3', '6', '3', '6', '6', '4', '4', '4', '3', '6', '3', '8', '4' %} aos-init" data-aos="fade-up" data-aos-delay="{% cycle '100', '200', '300', '400' %}">
+        <a href="{{ myimage.path | absolute_url }}" class="d-block photo-item" data-fancybox="gallery">
+          {% cloudinary {{ myimage.path }} alt="Image" class="img-fluid" %}
+          <div class="photo-text-more">
+            <div class="photo-text-more">
+              <h3 class="heading">{{ myimage.path }}</h3>
+              <span class="meta">42 Photos</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-12 text-center py-5">
+        <p>
+          Copyright ©
+          <script type="text/javascript" async="" src="{{ '/assets/js/analytics.js' | absolute_url }}"></script>
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          2021 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
