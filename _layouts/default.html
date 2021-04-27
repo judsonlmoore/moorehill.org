@@ -6,9 +6,6 @@ layout: compress
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <title>{{ site.title }}</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}" />
@@ -22,9 +19,17 @@ layout: compress
     <link rel="stylesheet" href="{{ '/assets/css/aos.css' | absolute_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/fancybox.min.css' | absolute_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style(1).css' | absolute_url }}" />
+
+    {% seo %}
+
   </head>
 
-  <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+  {% capture layout %}
+  {% if page.layout %}layout-{{ page.layout }}
+  {% endif %}
+  {% endcapture %}
+
+  <body class="{{layout}}" data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
     <div class="site-wrap">
       <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
@@ -82,8 +87,27 @@ layout: compress
         </div>
       </header>
 
-      {{ content }}
+      <main class="main-content">
+        <div class="container-fluid photos">
+          <div class="row align-items-stretch">
+      
+            {{ content }}
 
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-12 text-center py-5">
+              <p>
+                Copyright ©
+                <script type="text/javascript" async="" src="{{ '/assets/js/analytics.js' | absolute_url }}"></script>
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                2021 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="{{ '/assets/js/jquery-3.3.1.min.js' | absolute_url }}"></script>
@@ -100,6 +124,7 @@ layout: compress
     <script src="{{ '/assets/js/jquery.fancybox.min.js' | absolute_url }}"></script>
     <script src="{{ '/assets/js/main.js' | absolute_url }}"></script>
 
+    {% if jekyll.environment == 'production' %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCLBJ6Q9S6"></script>
     <script>
@@ -109,6 +134,7 @@ layout: compress
 
       gtag('config', 'G-PCLBJ6Q9S6');
     </script>
+    {% endif %}
 
   </body>
 </html>
