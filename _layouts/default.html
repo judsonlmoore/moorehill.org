@@ -31,61 +31,8 @@ layout: compress
 
   <body class="{{layout}}" data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
     <div class="site-wrap">
-      <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-          </div>
-        </div>
-        <div class="site-mobile-menu-body">
-          <ul class="site-nav-wrap">
-            <li class="active"><a href="{{ 'index.html' | absolute_url }}">Home</a></li>
-            <li><a href="{{ 'photos.html' | absolute_url }}">Photos</a></li>
-            <li><a href="{{ 'bio.html' | absolute_url }}">Bio</a></li>
-            <li><a href="{{ 'blog.html' | absolute_url }}">Blog</a></li>
-            <li><a href="{{ 'contact.html' | absolute_url }}">Contact</a></li>
-          </ul>
-          <ul class="site-nav-wrap">
-            <li>
-              <a href="{{ '#' | absolute_url }}"><span class="icon-facebook"></span></a>
-            </li>
-            <li>
-              <a href="{{ '#' | absolute_url }}"><span class="icon-twitter"></span></a>
-            </li>
-            <li>
-              <a href="{{ '#' | absolute_url }}"><span class="icon-instagram"></span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <header class="header-bar d-flex d-lg-block align-items-center aos-init aos-animate" data-aos="fade-left">
-        <div class="site-logo">
-          <a href="{{ 'index.html' | absolute_url }}">Moore Hill</a>
-        </div>
-        <div class="d-inline-block d-xl-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;">
-          <a href="{{ '#' | absolute_url }}" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
-        </div>
-        <div class="main-menu">
-          <ul class="js-clone-nav">
-            <li class="active"><a href="{{ 'index.html' | absolute_url }}">Home</a></li>
-            <li><a href="{{ 'photos.html' | absolute_url }}">Photos</a></li>
-            <li><a href="{{ 'bio.html' | absolute_url }}">Bio</a></li>
-            <li><a href="{{ 'blog.html' | absolute_url }}">Blog</a></li>
-            <li><a href="{{ 'contact.html' | absolute_url }}">Contact</a></li>
-          </ul>
-          <ul class="social js-clone-nav">
-            <li>
-              <a href="{{ '#' | absolute_url }}"><span class="icon-facebook"></span></a>
-            </li>
-            <li>
-              <a href="{{ '#' | absolute_url }}"><span class="icon-twitter"></span></a>
-            </li>
-            <li>
-              <a href="{{ '#' | absolute_url }}"><span class="icon-instagram"></span></a>
-            </li>
-          </ul>
-        </div>
-      </header>
+
+      <!-- {% include navigation.html %} -->
 
       <main class="main-content">
         <div class="container-fluid photos">
