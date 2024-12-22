@@ -10,7 +10,7 @@ layout: default
 
   <!-- Adjust the path for the development environment -->
   {% if jekyll.environment == 'production' %}
-    {% capture img_src %}https://images.weserv.nl/?url={{ myimage.path | absolute_url }}&w=800&output=webp&q=65{% endcapture %}
+    {% capture img_src %}{{ myimage.path | absolute_url }}{% endcapture %}
   {% endif %}
 
   <div class="col-6 col-md-6 col-lg-{% cycle '8', '4', '3', '6', '3', '6', '6', '4', '4', '4', '3', '6', '3', '8', '4' %} aos-init" data-aos="fade-up" data-aos-delay="{% cycle '100', '200', '300', '400' %}">
@@ -22,3 +22,4 @@ layout: default
     </a>
   </div>
 {% endfor %}
+
