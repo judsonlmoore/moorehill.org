@@ -2,24 +2,18 @@
 layout: default
 ---
 
+
 {% assign image_files = site.static_files | where: "image", true %}
-
 {% for myimage in image_files %}
-  <!-- Assign the default image path -->
-  {% assign img_src = myimage.path %}
-
-  <!-- Adjust the path for the development environment -->
-  {% if jekyll.environment == 'production' %}
-    {% capture img_src %}https://images.weserv.nl/?url={{ myimage.path | absolute_url }}&w=800&output=webp&q=65{% endcapture %}
-  {% endif %}
-
-  <div class="col-6 col-md-6 col-lg-{% cycle '8', '4', '3', '6', '3', '6', '6', '4', '4', '4', '3', '6', '3', '8', '4' %} aos-init" data-aos="fade-up" data-aos-delay="{% cycle '100', '200', '300', '400' %}">
-    <a href="{{ img_src }}" class="d-block photo-item" data-fancybox="gallery">
-      {% include image.html src=img_src %}
+<div class="col-6 col-md-6 col-lg-{% cycle '8', '4', '3', '6', '3', '6', '6', '4', '4', '4', '3', '6', '3', '8', '4' %} aos-init" data-aos="fade-up" data-aos-delay="{% cycle '100', '200', '300', '400' %}">
+  <a href="{{ myimage.path | absolute_url }}" class="d-block photo-item" data-fancybox="gallery">
+    {% include image.html src=myimage.path alt="Image" class="img-fluid" %}
+    <div class="photo-text-more">
       <div class="photo-text-more">
         <h3 class="heading">Click to view</h3>
+        <!-- <span class="meta">42 Photos</span> -->
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
+</div>
 {% endfor %}
-
